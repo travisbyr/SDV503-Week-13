@@ -1,3 +1,5 @@
+// Talk about this in Week 13 Journal Entry under what I have learnt
+
 // Friday 29th May - Classes
 // class Student {
 //   constructor(firstName, lastName) {
@@ -54,3 +56,25 @@ class Calculator {
 }
 var cal = new Calculator();
 console.log(cal.add(5, 5));
+
+//Last in is the first out -- Stack example of data, plates.
+var array = [];
+array.push("First");
+array.push("Second");
+array.push("Third");
+console.log(array);
+array.pop();
+console.log(array);
+
+function factorial(x) {
+  if (x === 0) return 1;
+  return x * factorial(x - 1);
+}
+console.log(factorial(4));
+// 5*4*3*2*1
+
+//Queue - first in, first out
+var queue = [1, 2, 3];
+console.log(queue);
+queue.shift();
+console.log(queue);
