@@ -1,5 +1,5 @@
 // Talk about this in Week 13 Journal Entry under what I have learnt
-
+// add free code camp examples to journal
 // Friday 29th May - Classes
 // class Student {
 //   constructor(firstName, lastName) {
