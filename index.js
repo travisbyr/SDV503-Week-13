@@ -38,31 +38,19 @@ class DataStructure {
     // what should each object created from this class be able to do?
   }
 }
-
-//class calculator, take 2 properties, add, sub, mult and divide
-
 class Calculator {
-  constructor(numberOne, numberTwo) {
-    this.numberOne = numberOne;
-    this.numberTwo = numberTwo;
+  add(a, b) {
+    return a + b;
   }
-  addition() {
-    return this.numberOne + this.numberTwo;
+  subtract(a, b) {
+    return a - b;
   }
-  subtraction() {
-    return this.numberOne - this.numberTwo;
+  multiply(a, b) {
+    return a * b;
   }
-  multiplication() {
-    return this.numberOne * this.numberTwo;
-  }
-  division() {
-    return this.numberOne / this.numberTwo;
+  divide(a, b) {
+    return a / b;
   }
 }
-
-let firstCalculation = new Calculator(1, 2);
-
-console.log(firstCalculation.addition());
-console.log(firstCalculation.subtraction());
-console.log(firstCalculation.multiplication());
-console.log(firstCalculation.division());
+var cal = new Calculator();
+console.log(cal.add(5, 5));
