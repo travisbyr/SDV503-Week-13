@@ -105,6 +105,7 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
   pop() {
     if (!this.head) return undefined;
     var current = this.head;
@@ -122,7 +123,6 @@ class SinglyLinkedList {
     }
     return current;
   }
-
   get(index) {
     if (index < 0 || index >= this.length) return null;
     var counter = 0;
@@ -144,11 +144,14 @@ class SinglyLinkedList {
 }
 
 var list = new SinglyLinkedList();
-list.push("Hi");
-list.push("How");
-
+console.log(list);
+list.push("1");
+list.push("2");
+console.log(list);
+list.pop();
+console.log(list);
 console.log(list.get(0));
-console.log(list.set(0, "Hey"));
+list.set(0, "Hey");
 console.log(list.get(0));
 
 console.log(list);
