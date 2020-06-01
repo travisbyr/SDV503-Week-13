@@ -80,7 +80,6 @@ queue.shift();
 console.log(queue);
 */
 
-
 // Linked List Example
 class Node {
   constructor(val) {
@@ -88,14 +87,12 @@ class Node {
     this.next = null;
   }
 }
-
 class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
   }
-
   push(val) {
     var newNode = new Node(val);
     if (!this.head) {
@@ -109,27 +106,49 @@ class SinglyLinkedList {
     return this;
   }
   pop() {
-    if(!this.head) return undefined;
+    if (!this.head) return undefined;
     var current = this.head;
     var newTail = current;
-    while(current.next) {
+    while (current.next) {
       newTail = current;
       current = current.next;
     }
     this.tail = newTail;
     this.tail.next = null;
     this.length--;
-    if(this.length === 0) {
+    if (this.length === 0) {
       this.head = null;
       this.tail = null;
     }
     return current;
   }
+
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    var counter = 0;
+    var current = this.head;
+    while (counter !== index) {
+      current = current.next;
+      counter++;
+    }
+    return current;
+  }
+  set(index, val) {
+    var foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.val = val;
+      return true;
+    }
+    return false;
+  }
 }
 
-var list = new SinglyLinkedList()
-list.push("Hi")
-list.pop("Hi")
+var list = new SinglyLinkedList();
+list.push("Hi");
+list.push("How");
 
-console.log(list)
+console.log(list.get(0));
+console.log(list.set(0, "Hey"));
+console.log(list.get(0));
 
+console.log(list);
