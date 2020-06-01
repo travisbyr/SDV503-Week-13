@@ -148,7 +148,7 @@ console.log(list)
 list.push("1");
 list.push("2");
 console.log(list)
-list.shift()
+list.pop()
 console.log(list)
 console.log(list.get(0));
 list.set(0, "Hey");
