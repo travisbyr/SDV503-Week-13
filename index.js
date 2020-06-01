@@ -144,12 +144,12 @@ class SinglyLinkedList {
 }
 
 var list = new SinglyLinkedList();
-console.log(list);
+console.log(list)
 list.push("1");
 list.push("2");
-console.log(list);
-list.pop();
-console.log(list);
+console.log(list)
+list.shift()
+console.log(list)
 console.log(list.get(0));
 list.set(0, "Hey");
 console.log(list.get(0));
